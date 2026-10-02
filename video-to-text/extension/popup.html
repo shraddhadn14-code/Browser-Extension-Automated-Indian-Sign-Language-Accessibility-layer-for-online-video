@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8">
+<style>
+  body{width:380px;font:14px system-ui,sans-serif;margin:0;padding:12px;background:#fff;color:#111}
+  @media (prefers-color-scheme:dark){body{background:#1b1b1b;color:#eee}}
+  h1{font-size:12px;letter-spacing:.08em;margin:0 0 4px}
+  #src{font-size:12px;opacity:.75;margin-bottom:6px}
+  #status{font-style:italic;opacity:.7;margin-bottom:6px}
+  #list{max-height:280px;overflow:auto;border-top:1px solid #8884;padding-top:6px}
+  #list div{padding:3px 0}
+  #interim{opacity:.55;font-style:italic;min-height:1em}
+  button{margin:8px 6px 0 0;padding:4px 8px}
+</style>
+<h1>LIVE TRANSCRIPT</h1>
+<div id="src">Source: —</div>
+<div id="status">[Listening...]</div>
+<div id="list"></div>
+<div id="interim"></div>
+<button id="asr">Start speech recognition</button><button id="stop">Stop ASR</button>
+<button id="copy">Copy JSON</button><button id="clear">Clear</button>
+<script src="popup.js"></script>
