@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Live Video Transcript (prototype)",
+  "version": "0.1.2",
+  "description": "Real-time video-to-text: captions first, local Whisper ASR fallback.",
+  "minimum_chrome_version": "116",
+  "permissions": ["tabCapture", "offscreen", "storage", "activeTab"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Live transcript" },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["pipeline.js", "content.js"],
+    "all_frames": true,
+    "run_at": "document_idle"
+  }]
+}
